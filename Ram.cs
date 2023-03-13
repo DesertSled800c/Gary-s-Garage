@@ -2,14 +2,10 @@ using System;
 
 namespace Garage
 {
-    public class Ram : Vehicle
+    public class Ram : Vehicle, IGasVehicle
     {
-        public double FuelCapacity { get; set; }
-        
-        public void RefuelTank()
-        {
-            // method definition omitted
-        }
+        public int CurrentFuelPercentage { get; set; }
+        public double RefuelTank { get; set; }
 
         public override void Drive()
         {
